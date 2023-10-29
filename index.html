@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- stylesheets -->
+
+  <link rel="stylesheet" href="./public/styles/style.css">
+
+  <!-- You can add your own fonts from fonts.google.com -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+
+  <!-- Default Script tags -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./public/js/index.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+    };
+  </script>
+
+  <!-- Replace the title name -->
+  <title>Bitrise for Jira</title>
+</head>
+
+<body style="font-family: 'Poppins', sans-serif; min-height: 100vh; display: flex; flex-direction: column;"
+  class="dark:bg-slate-900 bg-white dark:text-white">
+  <!-- Header start here -->
+  <header class="w-full p-3 border-b dark:border-b  flex sticky top-0 z-10 dark:bg-slate-900 bg-white dark:text-white ">
+    <nav
+      class="w-full flex flex-col lg:flex-row md:flex-row sm:flex-row items-start lg:item-center md:item-center sm:item-center lg:justify-between md:justify-between sm:justify-between justify-start dark:text-white">
+      <ul>
+        <!-- You can change your logo name -->
+        <li class="font-mono text-xl">
+          <a href="./index.html">
+          Bitrise for Jira
+        </a>
+        </li>
+      </ul>
+      <ul id="header-nav" class="mr-6 sm:flex md:flex lg:flex hidden">
+        <li class="mr-5 mb-3 mt-5 sm:mb-0 sm:mt-0 md:mb-0 md:mt-0 lg:mb-0 lg:mt-0">
+          <a href="https://www.up2stay.com/imprint">Imprint</a>
+        </li>
+        <li class="mr-5 mb-3 mt-5 sm:mb-0 sm:mt-0 md:mb-0 md:mt-0 lg:mb-0 lg:mt-0">
+          <a href="https://www.up2stay.com/data-privacy">Data Privacy</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="sm:hidden flex" onclick="OnclickOpenMenu()" id="open-menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd"
+          d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+          clip-rule="evenodd" />
+      </svg>
+    </div>
+    <div class="hidden" onclick="OnclickCloseMenu()" id="close-menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </div>
+  </header>
+  <!-- Header ends here -->
+
+  <div class="flex flex-col md:flex-row lg:flex-row">
+    <div class="pl-5 md:pl-[250px] lg:pl-[250px]">
+      <section>
+        <div class="h-full mt-10">
+          <p class="font-normal text-2xl">Introduction</p>
+          <p class="leading-0 w-3/4">
+            Welcome to the Jira-Bitrise Integration Plugin Documentation. This plugin is designed to streamline your software development workflow by linking Bitrise builds to Jira issues. By consuming webhook events from Bitrise, this integration provides a seamless way to keep track of your development and issue management in one place. This documentation will guide you through the installation, configuration, and usage of this integration.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="h-full mt-10">
+          <p class="font-normal text-2xl">Installation</p>
+          <p class="leading-0 w-3/4">
+            Before you can begin using the Jira-Bitrise Integration, you'll need to install it. Follow these steps to get started:
+            Prerequisites:<br/>
+            1. You must have administrative access to your Jira instance.<br/>
+            2. You should have a Bitrise account with access to the projects and builds you want to link with Jira issues.<br/><br/>
+            To install the plugin:<br/>
+            1. Log in to your Jira instance with administrative privileges.<br/>
+            2. Click on the 'Settings' gear icon in the top right corner and select 'Manage Apps.'<br/>
+            3. Click on 'Find new apps' in the left sidebar.<br/>
+            4. Search for 'Bitrise for Jira' in the search bar.<br/>
+            5. Click on 'Install.'<br/>
+            6. Click on 'Get started.'<br/>
+            7. Follow the instructions on the configuration page to set up the plugin.<br/>
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="h-full mt-10">
+          <p class="font-normal text-2xl">Usage</p>
+          <p class="leading-0 w-3/4">
+            Now that the integration is configured, it will automatically link your Bitrise builds to the specified Jira issues. When a build is completed, a webhook event will be sent to Jira, associating the build with the Jira issue you defined. You can track your Bitrise builds and their associated Jira issues directly from your Jira project.          </p>
+        </div>
+      </section>
+      <section>
+        <div class="h-full mt-10">
+          <p class="font-normal text-2xl">Troubleshooting</p>
+          <p class="leading-0 w-3/4">
+            If you encounter any issues or have questions related to the Jira-Bitrise Integration Plugin, please mail us at contact@up2stay.com.
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>
