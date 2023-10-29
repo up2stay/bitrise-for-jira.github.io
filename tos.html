@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- stylesheets -->
+
+  <link rel="stylesheet" href="./public/styles/style.css">
+
+  <!-- You can add your own fonts from fonts.google.com -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+
+  <!-- Default Script tags -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./public/js/index.js"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+    };
+  </script>
+
+  <!-- Replace the title name -->
+  <title>Bitrise for Jira</title>
+</head>
+
+<body style="font-family: 'Poppins', sans-serif; min-height: 100vh; display: flex; flex-direction: column;"
+  class="dark:bg-slate-900 bg-white dark:text-white">
+  <!-- Header start here -->
+  <header class="w-full p-3 border-b dark:border-b  flex sticky top-0 z-10 dark:bg-slate-900 bg-white dark:text-white ">
+    <nav
+      class="w-full flex flex-col lg:flex-row md:flex-row sm:flex-row items-start lg:item-center md:item-center sm:item-center lg:justify-between md:justify-between sm:justify-between justify-start dark:text-white">
+      <ul>
+        <!-- You can change your logo name -->
+        <li class="font-mono text-xl">
+          <a href="./tos.html">
+          Bitrise for Jira - Documentation
+        </a>
+        </li>
+      </ul>
+      <ul id="header-nav" class="mr-6 sm:flex md:flex lg:flex hidden">
+        <li class="mr-5 mb-3 mt-5 sm:mb-0 sm:mt-0 md:mb-0 md:mt-0 lg:mb-0 lg:mt-0">
+          <a href="https://www.up2stay.com/imprint">Imprint</a>
+        </li>
+        <li class="mr-5 mb-3 mt-5 sm:mb-0 sm:mt-0 md:mb-0 md:mt-0 lg:mb-0 lg:mt-0">
+          <a href="https://www.up2stay.com/data-privacy">Data Privacy</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="sm:hidden flex" onclick="OnclickOpenMenu()" id="open-menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd"
+          d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+          clip-rule="evenodd" />
+      </svg>
+    </div>
+    <div class="hidden" onclick="OnclickCloseMenu()" id="close-menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </div>
+  </header>
+  <!-- Header ends here -->
+
+  <div class="flex flex-col md:flex-row lg:flex-row">
+    <div class="pl-5 md:pl-[250px] lg:pl-[250px]">
+      <section>
+        <div class="h-full mt-10">
+          <p class="font-normal text-2xl">Terms of Service</p>
+          <p class="leading-0 w-3/4">
+            In this agreement, the terms "Firm," "our," "ours," or "us" refer to Abdellaoui & Erkes up2stay GbR.
+
+            The words "Products" or "Applications" pertain to any software created and maintained by Abdellaoui & Erkes up2stay GbR. This encompasses Bitrise for Jira,<br/>
+
+            By utilizing our Products, both now and in the future, you are consenting to the most recent Terms of Use. This applies to our current and forthcoming offerings, as well as any additional features incorporated into our Products over time. We may, on occasion, choose not to exercise certain rights or provisions outlined in the Terms of Use; however, this does not constitute a waiver of those rights or provisions. These terms include a limitation of our legal responsibilities.<br/>
+            Failure to adhere to any of these terms may result in the termination of your access to any of our Products.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="h-full mt-10">
+          <p class="font-normal text-2xl">Uptime, Security, and Data Privacy</p>
+          <p class="leading-0 w-3/4">
+            Your utilization of our Products is at your own discretion. We provide these Products on an "as is" and "as available" basis. While we may not provide service-level agreements for the majority of our Products, we do consider the uptime of our applications to be of utmost importance.<br/>
+
+            We implement multiple safeguards to secure and protect your data, including backups, redundancies, and encryption. Data transmissions from the public Internet are consistently encrypted. In rare instances, there may be scenarios where your data is transferred through our network without encryption.<br/>
+
+            By using our Products, you entrust us with your data. You acknowledge that we may process your data in accordance with our Privacy Policy and for no other purpose. We may access your data for the following reasons:<br/>
+            - To assist you with support requests you submit.<br/>
+            - To ensure the security of your data and our Products, we examine logs and metadata as part of our routine activities.<br/>
+
+            In our capacity as an Atlassian Marketplace partner, we adhere to Atlassian's Privacy Policy.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="h-full mt-10">
+          <p class="font-normal text-2xl">Copyright and Ownership of Content
+          </p>
+          <p class="leading-0 w-3/4">
+            The content, design, and appearance of the Products are protected by copyright© belonging to the Firm. All rights are reserved. You are not permitted to duplicate, copy, or reuse any part of the HTML, CSS, JavaScript, or visual design components without obtaining explicit written consent from the Firm.<br/>
+
+            You agree not to replicate, duplicate, copy, sell, resell, or exploit any portion of the Products, the use of the Products, or access to the Products without obtaining explicit written permission from the Firm.<br/>
+
+            It is prohibited to modify another website in a manner that falsely implies an association with the Products or the Firm.<br/>
+        </div>
+      </section>
+      <section>
+        <div class="h-full mt-10">
+          <p class="font-normal text-2xl">Features and Defects</p>
+          <p class="leading-0 w-3/4">
+            We meticulously design our Products, drawing from our own experiences and the insights of customers who contribute their time and feedback. Nevertheless, there is no such thing as a service that satisfies everyone. We do not guarantee that our Products will meet your particular requirements or expectations.<br/>
+
+            We subject all of our features to thorough testing before releasing them. Similar to any software, our Products may contain occasional defects. We diligently track reported defects and prioritize those that are particularly critical, especially those related to security and privacy. We do not assure the complete absence of errors in our Products.<br/>
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="h-full mt-10">
+          <p class="font-normal text-2xl">Liability</p>
+          <p class="leading-0 w-3/4">
+            References to liability are scattered throughout these Terms, but to streamline the information:<br/>
+
+            You expressly acknowledge and consent that the Firm is not liable, whether in law or equity, to you or any third party for any direct, indirect, incidental, loss of profits, special, consequential, punitive, or exemplary damages, including, but not limited to, damages for the loss of profits, goodwill, use, data, or other intangible losses (even if the Firm has been informed of the potential for such damages), arising from: (i) the utilization or incapacity to utilize the Products; (ii) the cost of obtaining substitute goods and services as a result of goods, data, information, or services obtained or acquired, or messages received, or transactions entered into through or from the Products; (iii) unauthorized access to or alteration of your data or transmissions; (iv) statements or actions of any third party on the service; (v) or any other matter pertaining to these Terms of Use or the Products, whether as a breach of contract, tort (including negligence, whether active or passive), or any other theory of liability.
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+
+</html>
